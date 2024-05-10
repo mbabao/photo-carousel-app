@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,16 +12,83 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.carousel-container {
+  position: absolute;
+  top: 10px;
+  display: grid;
+  grid-template-columns: auto; /* Two columns */
+  align-items: center; /* Center items vertically */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.photo-index-label {
+  font-size: 200px; /* Adjust font size as needed */
+  color: white;
+}
+
+.countdown-label {
+  font-size: 80px; /* Adjust font size as needed */
+  color: white;
+}
+.countdown-logo {
+  width: 10px;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.carousel-image {
+  max-height: 780px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo-image {
+  position: absolute;
+  top: 0px;
+  width: 800px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
   }
-  to {
-    transform: rotate(360deg);
+  10%,
+  90% {
+    transform: translateX(-5px);
   }
+  20%,
+  80% {
+    transform: translateX(5px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-5px);
+  }
+  40%,
+  60% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.start-button {
+  position: absolute;
+  top: 800px;
+  color: white;
+  border: none;
+  width: 300px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  /* Apply animation */
+  animation: shake 1s infinite;
+}
+
+.start-button:hover {
+  animation: none;
 }
