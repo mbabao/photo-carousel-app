@@ -1,6 +1,8 @@
 .App {
   background-color: #282c34;
   text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
 .App-header {
@@ -43,6 +45,7 @@
 
 .logo-image {
   position: absolute;
+  width: 700px;
   top: 0px;
   height: auto; /* Maintain aspect ratio */
 }
@@ -75,7 +78,7 @@
 
 .start-button {
   position: absolute;
-  top: 500px;
+  top: 650px;
   color: white;
   border: none;
   width: 300px;
