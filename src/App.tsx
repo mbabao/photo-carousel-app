@@ -111,10 +111,9 @@ const App: React.FC = () => {
                 alt={photos[currentPhotoIndex].alt}
                 className="carousel-image"
               />
-              <br />
-              <div className="countdown-label">
+              {/* <br /><div className="countdown-label">
                 Next photo in... {countdown}
-              </div>
+              </div> */}
             </div>
           </>
         )}
