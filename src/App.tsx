@@ -43,7 +43,7 @@ const App: React.FC = () => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [carouselStarted, setCarouselStarted] = useState(false);
   const [carouselVisible, setCarouselVisible] = useState(false);
-  const [countdown, setCountdown] = useState(5); // Initial countdown value
+  const [countdown, setCountdown] = useState(10); // Initial countdown value
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -54,7 +54,7 @@ const App: React.FC = () => {
         if (currentPhotoIndex + 1 === photos.length) {
           handleCarouselEnd();
         }
-      }, 5000);
+      }, 10000);
     }
 
     return () => clearInterval(interval);
@@ -65,7 +65,7 @@ const App: React.FC = () => {
     if (carouselStarted) {
       countdownInterval = setInterval(() => {
         setCountdown((prevCountdown) =>
-          prevCountdown === 1 ? 5 : prevCountdown - 1
+          prevCountdown === 1 ? 10 : prevCountdown - 1
         );
       }, 1000);
     }
@@ -76,7 +76,7 @@ const App: React.FC = () => {
   const handleStartCarousel = () => {
     setCarouselStarted(true);
     setCarouselVisible(true);
-    setCountdown(5); // Reset countdown when carousel starts
+    setCountdown(10); // Reset countdown when carousel starts
   };
 
   const handleCarouselEnd = () => {
