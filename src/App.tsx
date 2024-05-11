@@ -37,6 +37,8 @@ const photos: Photo[] = [
   { src: "/photos/28.jpg", alt: "Photo 28" },
   { src: "/photos/29.jpg", alt: "Photo 29" },
   { src: "/photos/30.jpg", alt: "Photo 30" },
+  { src: "/photos/31.jpg", alt: "Photo 31" },
+  { src: "/photos/32.jpg", alt: "Photo 32" },
 ];
 
 const App: React.FC = () => {
